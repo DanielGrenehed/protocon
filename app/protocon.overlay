@@ -1,0 +1,18 @@
+/{
+	zephyr,user {
+		io-channels = <&adc 0>, <&adc 1>;
+	};
+
+	inputs {
+		compatible="gpio-keys";
+		status="okay";
+		
+		sw1: sw1 {
+			gpios = <&gpio0 22 (GPIO_ACTIVE_HIGH)>;
+		};
+	};
+};
+
+&adc {
+	status="okay";
+};
